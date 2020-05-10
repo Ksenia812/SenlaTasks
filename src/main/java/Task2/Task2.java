@@ -16,7 +16,7 @@ public class Task2 {
         }
         while (!isCorrectInput(firstInput, secondInput));
 
-        int firstNumber = Integer.parseInt(secondInput);
+        int firstNumber = Integer.parseInt(firstInput);
         int secondNumber = Integer.parseInt(secondInput);
 
         System.out.println("The Greater Common Divide is " + findGCD(firstNumber, secondNumber));
@@ -42,11 +42,11 @@ public class Task2 {
     }
 
     private static int findGCD(int firstNumber, int secondNumber) {
-        return secondNumber == 0 ? firstNumber : findGCD(secondNumber, firstNumber % secondNumber);
+        return secondNumber==0 ?firstNumber : findGCD(secondNumber,firstNumber%secondNumber);
     }
 
     private static int findLCM(int firstNumber, int secondNumber) {
-        return firstNumber / findGCD(firstNumber, secondNumber) * secondNumber;
+        return firstNumber / findGCD(firstNumber, secondNumber) *secondNumber;
     }
 }
 

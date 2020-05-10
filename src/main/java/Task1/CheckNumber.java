@@ -25,7 +25,7 @@ public class CheckNumber {
     private static void isPrimeOrComplex(int number) {
 
 
-        for (int i = 2; i * i <= Math.sqrt(number); i++) {
+        for (int i = 2; i * i <= number; i++) {
             if (number % i == 0) {
                 System.out.println(number + "  is complex");
                 return;
